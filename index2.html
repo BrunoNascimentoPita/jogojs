@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Village</title>
+</head>
+
+<body>
+  <style>
+    /*Começo*/
+    #welcome {
+      max-width: 480px;
+      text-align: center;
+      margin: 60px auto;
+      font-family: 'Courier New', Courier, monospace;
+      color: rgb(0, 66, 55);
+    }
+
+    #welcome:hover {
+      cursor: default;
+    }
+
+    /*Diga seu nome*/
+    #nome {
+      display: none;
+      color: rgb(255, 255, 255);
+    }
+
+    .p {
+      display: block;
+    }
+
+    body {
+      background: #21b2cc;
+      color: rgb(0, 0, 0);
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    #username:focus {
+      box-shadow: 0 0 0 0;
+      border: 0 none;
+      outline: 0;
+      color: black;
+    }
+
+    #imagemperson1 {
+      cursor: pointer;
+    }
+
+    #imagemperson1:hover{
+      padding:10px;
+    }
+
+    #imagemperson2 {
+      cursor: pointer;
+    }
+
+    #imagemperson2:hover{
+      padding:10px;
+    }
+
+    #imagemperson3 {
+      cursor: pointer;
+    }
+
+    #imagemperson3:hover{
+      padding:10px;
+    }
+
+
+    #start {
+      position: relative;
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+      border-radius: 30px;
+      padding: 20px;
+      border-style: none;
+      top: 20px;
+
+
+    }
+
+
+
+    #escolhaBoneco {
+      display: none;
+      color: rgb(2, 87, 44);
+    }
+
+    #username {
+      box-shadow: 0 0 0 0;
+      border: 0 none;
+      outline: 0;
+      color: black;
+      font-size: 20px;
+      text-align: center;
+      background-color: transparent;
+      width: 200px;
+      background: linear-gradient(rgb(255, 255, 255), rgb(198, 198, 199));
+      border-radius: 15px;
+      position: fixed;
+      height: 40px;
+      left: 50%;
+      top: 100px;
+      transform: translate(-50%, -50%);
+      padding-top: 10px;
+      color: #fff;
+      line-height: 10px;
+      resize: none;
+
+    }
+
+    #read {
+      position: relative;
+      top: 70px;
+      border: 0 none;
+      border-radius: 4px;
+      width: 200px;
+      height: 60px;
+      cursor: pointer;
+    }
+
+    #read:hover {
+      padding: 8px;
+    }
+
+
+    input:hover {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 15px;
+      background-color: rgb(5, 201, 48);
+      padding: 10px;
+      color: white;
+      outline: 0;
+
+    }
+
+    input::placeholder {
+      opacity: 70%;
+      font-size: 15px;
+    }
+
+    /*DECISÕES*/
+
+    #decisao1 {
+      display: none;
+    }
+  </style>
+  <!-- Músicas -->
+  <audio src="music/music.mp3" id='tocarMusica'></audio>
+  <audio src="music/button.mp3" id='tocarButton'></audio>
+  <audio src="music/click.wav" id='clicar'></audio>
+  <!-- Start -->
+  <center><img id="start"
+     onclick="document.getElementById('start').style.display='none';document.getElementById('welcome').style.display='none';document.getElementById('nome').style.display='block';document.getElementById('clicar').play();document.getElementById('clicar').volume = 0.2;document.getElementById('tocarMusica').play();document.getElementById('tocarMusica').volume = 0.2;"
+      src="img/dungeon.png" alt="simbolo da caverna do jogo">
+    <h1>
+      <div id="welcome">
+        Bem-Vindo a dungeon!</div>
+    </h1>
+    <!-- Fim do Start -->
+
+    <!-- Escolha seu nome -->
+    <div id="nome">
+      <p><strong>
+          <h2> Para entrarmos nessa jornada, escolha seu nome de aventureiro!</h2>
+        </strong></p>
+      <input type="text" onmouseenter="document.getElementById('tocarButton').play()" name="nome"
+        placeholder=" Aventureiro..." id="username" maxlength="15"><img src="img/button.png" id="read"
+        onmouseenter="document.getElementById('tocarButton').play()" ;
+        onclick="document.getElementById('clicar').play();document.getElementById('clicar').volume = 0.2;nomeDigitado();document.getElementById('nome').style.display='none';document.getElementById('escolhaBoneco').style.display='block';">
+    </div>
+    <!-- Fim Escolha seu nome -->
+
+    <!-- Escolha do boneco -->
+    <div id='nomeqdigitou'></div>
+    <div id='escolhaBoneco'>
+      <h1>Sem mais delongas escolha seu aventureiro!</h1> <br><img id="imagemperson1" src="img/p1.2.png"
+        alt="personagem1" srcset="" onmouseenter="document.getElementById('tocarButton').play()" ;
+        onclick="document.getElementById('clicar').play();document.getElementById('clicar').volume = 0.2;document.getElementById('escolhaBoneco').style.display='none';document.getElementById('nomeqdigitou').style.display='none'"
+        ;>
+      <img id="imagemperson2" src="img/p2.png" alt="personagem2" srcset=""
+        onmouseenter="document.getElementById('tocarButton').play()" ;
+        onclick="document.getElementById('clicar').play();document.getElementById('clicar').volume = 0.2;document.getElementById('escolhaBoneco').style.display='none';document.getElementById('nomeqdigitou').style.display='none'"
+        ;>
+      <img id="imagemperson3" src="img/perso3.png" alt="personagem3" srcset=""
+        onmouseenter="document.getElementById('tocarButton').play()" ;
+        onclick="document.getElementById('clicar').play();document.getElementById('clicar').volume = 0.2;document.getElementById('escolhaBoneco').style.display='none';document.getElementById('nomeqdigitou').style.display='none'"
+        ;>
+    </div>
+    <!-- Fim escolha do boneco -->
+
+    <!-- Personagem 01 Cena 01 -->
+    <img src="" alt="">
+    <!-- Decisão 01 Personagem 01-->
+    <div id="decisao1">
+      <button>SIM</button>
+      <!-- Decisão 02 Personagem 01-->
+      <button>NÃO TENHO CERTEZA</button>
+      <!-- Decisão 03 Personagem 01-->
+      <button>NÃO</button>
+    </div>
+    <!-- Resolução 01 Personagem 01 -->
+
+    <!-- Resolução 02 Personagem 01 -->
+
+    <!-- Resolução 03 Personagem 01 -->
+
+    <!--_________________________________-->
+
+
+
+  </center>
+
+  <script>
+
+    // Declaração de variáveis //
+    var pegarNome = "";
+    var nomePersonagem = document.getElementById('nome');
+    var input = document.getElementById("username");
+    //Fim Declaração de variáveis
+
+    // Evento de Apertar Enter //
+    var input = document.getElementById("username");
+    input.addEventListener("keyup", function (event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("read").click();
+      }
+    });
+    // Fim Evento de Apertar Enter //
+
+    // Efeito máquina de escrever //
+    function typeWriter(elemento) {
+      const textoArray = elemento.innerHTML.split('');
+      elemento.innerHTML = '';
+      for (let i = 0; i < textoArray.length; i++) {
+        setTimeout(() => elemento.innerHTML += textoArray[i], 85 * i);
+      }
+    }
+    const titulo = document.querySelector('div#welcome');
+    typeWriter(titulo);
+    // Fim efeito máquina de escrever //
+
+
+    // Pegar username //
+    function nomeDigitado() {
+      pegarNome = document.getElementById('username').value;
+      document.getElementById('nomeqdigitou').innerHTML = '<h2>' + pegarNome + ',</h2>';
+
+      if (pegarNome == "") {
+        document.getElementById('nomeqdigitou').innerHTML = 'não digitou nenhum nome, também não vai jogar rum!';
+        document.getElementById('escolhaBoneco').innerText = '';
+      }
+
+    }
+    // Fim pegar username //
+
+  </script>
+
+</body>
+
+</html>
