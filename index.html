@@ -137,7 +137,21 @@
       outline: 0;
 
     }
+    #c-loader {
+  animation: is-rotating 1s infinite;
+  border: 6px solid #e5e5e5;
+  border-radius: 50%;
+  border-top-color: #51d4db;
+  height: 50px;
+  width: 50px;
+  display:none;
+}
 
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
     input::placeholder {
       opacity: 70%;
       font-size: 15px;
@@ -182,7 +196,7 @@
     <div id='escolhaBoneco'>
       <h1>Sem mais delongas escolha seu aventureiro!</h1> <br><img id="imagemperson1" src="img/p1.2.png"
         alt="personagem1" srcset="" onmouseenter="document.getElementById('tocarButton').play()" ;
-        onclick="document.getElementById('vozperson').play();document.getElementById('selecionar').play();document.getElementById('escolhaBoneco').style.display='none';document.getElementById('nomeqdigitou').style.display='none'"
+        onclick="document.getElementById('c-loader').style.display='block';document.getElementById('vozperson').play();document.getElementById('selecionar').play();document.getElementById('escolhaBoneco').style.display='none';document.getElementById('nomeqdigitou').style.display='none'"
         ;>
       <img id="imagemperson2" src="img/p2.png" alt="personagem2" srcset=""
         onmouseenter="document.getElementById('tocarButton').play()" ;
@@ -214,7 +228,9 @@
     <!--_________________________________-->
 
 
-
+<!-- Animação de loading -->
+<div id="c-loader"></div>
+<!-- Fim Animação de loading -->
   </center>
 
   <script>
