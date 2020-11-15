@@ -171,6 +171,7 @@
   <audio src="music/click.wav" id='clicar'></audio>
   <audio src="music/selectperson.wav" id='selecionar'></audio>
   <audio src="music/vozperson.mp3" id='vozperson'></audio>
+  <audio src="music/vozperson2.mp3" id='vozperson2'></audio>
   <!-- Start -->
   <center><img id="start"
       onclick="document.getElementById('start').style.display='none';document.getElementById('welcome').style.display='none';document.getElementById('nome').style.display='block';document.getElementById('clicar').play();document.getElementById('clicar').volume = 0.2;document.getElementById('tocarMusica').play();document.getElementById('tocarMusica').volume = 0.2;"
@@ -183,7 +184,7 @@
 
     <!-- Escolha seu nome -->
     <div id="nome">
-      
+
       <p><strong>
           <h2> Para entrarmos nessa jornada, escolha seu nome de aventureiro!</h2>
         </strong></p>
@@ -217,6 +218,7 @@
         onmouseenter="document.getElementById('tocarButton').play()" ; 
         onclick="document.getElementById('c-loader').style.display='block';
         document.getElementById('selecionar').play();
+        document.getElementById('vozperson2').play();
         document.getElementById('clicar').play();
         document.getElementById('clicar').volume = 0.2;
         document.getElementById('escolhaBoneco').style.display='none';
