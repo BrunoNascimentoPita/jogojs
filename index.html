@@ -50,24 +50,24 @@
       cursor: pointer;
     }
 
-    #imagemperson1:hover{
-      padding:10px;
+    #imagemperson1:hover {
+      padding: 10px;
     }
 
     #imagemperson2 {
       cursor: pointer;
     }
 
-    #imagemperson2:hover{
-      padding:10px;
+    #imagemperson2:hover {
+      padding: 10px;
     }
 
     #imagemperson3 {
       cursor: pointer;
     }
 
-    #imagemperson3:hover{
-      padding:10px;
+    #imagemperson3:hover {
+      padding: 10px;
     }
 
 
@@ -79,8 +79,7 @@
       padding: 20px;
       border-style: none;
       top: 20px;
-
-
+      object-fit: cover;
     }
 
 
@@ -153,9 +152,10 @@
   <audio src="music/music.mp3" id='tocarMusica'></audio>
   <audio src="music/button.mp3" id='tocarButton'></audio>
   <audio src="music/click.wav" id='clicar'></audio>
+
   <!-- Start -->
   <center><img id="start"
-     onclick="document.getElementById('start').style.display='none';document.getElementById('welcome').style.display='none';document.getElementById('nome').style.display='block';document.getElementById('clicar').play();document.getElementById('clicar').volume = 0.2;document.getElementById('tocarMusica').play();document.getElementById('tocarMusica').volume = 0.2;"
+      onclick="document.getElementById('start').style.display='none';document.getElementById('welcome').style.display='none';document.getElementById('nome').style.display='block';document.getElementById('clicar').play();document.getElementById('clicar').volume = 0.2;document.getElementById('tocarMusica').play();document.getElementById('tocarMusica').volume = 0.2;"
       src="img/dungeon.png" alt="simbolo da caverna do jogo">
     <h1>
       <div id="welcome">
@@ -180,7 +180,7 @@
     <div id='escolhaBoneco'>
       <h1>Sem mais delongas escolha seu aventureiro!</h1> <br><img id="imagemperson1" src="img/p1.2.png"
         alt="personagem1" srcset="" onmouseenter="document.getElementById('tocarButton').play()" ;
-        onclick="document.getElementById('clicar').play();document.getElementById('clicar').volume = 0.2;document.getElementById('escolhaBoneco').style.display='none';document.getElementById('nomeqdigitou').style.display='none'"
+        onclick="document.getElementById('escolhaBoneco').style.display='none';document.getElementById('nomeqdigitou').style.display='none'"
         ;>
       <img id="imagemperson2" src="img/p2.png" alt="personagem2" srcset=""
         onmouseenter="document.getElementById('tocarButton').play()" ;
