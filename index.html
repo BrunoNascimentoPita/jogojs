@@ -137,21 +137,23 @@
       outline: 0;
 
     }
-    #c-loader {
-  animation: is-rotating 1s infinite;
-  border: 6px solid #e5e5e5;
-  border-radius: 50%;
-  border-top-color: #51d4db;
-  height: 50px;
-  width: 50px;
-  display:none;
-}
 
-@keyframes is-rotating {
-  to {
-    transform: rotate(1turn);
-  }
-}
+    #c-loader {
+      animation: is-rotating 1s infinite;
+      border: 6px solid #e5e5e5;
+      border-radius: 50%;
+      border-top-color: #51d4db;
+      height: 50px;
+      width: 50px;
+      display: none;
+    }
+
+    @keyframes is-rotating {
+      to {
+        transform: rotate(1turn);
+      }
+    }
+
     input::placeholder {
       opacity: 70%;
       font-size: 15px;
@@ -167,8 +169,8 @@
   <audio loop src="music/music.mp3" id='tocarMusica'></audio>
   <audio src="music/button.mp3" id='tocarButton'></audio>
   <audio src="music/click.wav" id='clicar'></audio>
-<audio src="music/selectperson.wav" id='selecionar'></audio>
-<audio src="music/vozperson.mp3" id='vozperson'></audio>
+  <audio src="music/selectperson.wav" id='selecionar'></audio>
+  <audio src="music/vozperson.mp3" id='vozperson'></audio>
   <!-- Start -->
   <center><img id="start"
       onclick="document.getElementById('start').style.display='none';document.getElementById('welcome').style.display='none';document.getElementById('nome').style.display='block';document.getElementById('clicar').play();document.getElementById('clicar').volume = 0.2;document.getElementById('tocarMusica').play();document.getElementById('tocarMusica').volume = 0.2;"
@@ -181,31 +183,53 @@
 
     <!-- Escolha seu nome -->
     <div id="nome">
+      
       <p><strong>
           <h2> Para entrarmos nessa jornada, escolha seu nome de aventureiro!</h2>
         </strong></p>
+
       <input type="text" onmouseenter="document.getElementById('tocarButton').play()" name="nome"
         placeholder=" Aventureiro..." id="username" maxlength="15"><img src="img/button.png" id="read"
+        
         onmouseenter="document.getElementById('tocarButton').play()" ;
-        onclick="document.getElementById('clicar').play();document.getElementById('clicar').volume = 0.2;nomeDigitado();document.getElementById('nome').style.display='none';document.getElementById('escolhaBoneco').style.display='block';">
+        onclick="document.getElementById('clicar').play();
+        document.getElementById('clicar').volume = 0.2;
+        nomeDigitado();
+        document.getElementById('nome').style.display='none';
+        document.getElementById('escolhaBoneco').style.display='block';">
     </div>
     <!-- Fim Escolha seu nome -->
 
     <!-- Escolha do boneco -->
     <div id='nomeqdigitou'></div>
     <div id='escolhaBoneco'>
-      <h1>Sem mais delongas escolha seu aventureiro!</h1> <br><img id="imagemperson1" src="img/p1.2.png"
-        alt="personagem1" srcset="" onmouseenter="document.getElementById('tocarButton').play()" ;
-        onclick="document.getElementById('c-loader').style.display='block';document.getElementById('vozperson').play();document.getElementById('selecionar').play();document.getElementById('escolhaBoneco').style.display='none';document.getElementById('nomeqdigitou').style.display='none'"
-        ;>
+      <h1>Sem mais delongas escolha seu aventureiro!</h1> <br>
+
+      <img id="imagemperson1" src="img/p1.2.png" alt="personagem1" srcset=""
+        onmouseenter="document.getElementById('tocarButton').play()" ; 
+        onclick="document.getElementById('c-loader').style.display='block';
+        document.getElementById('vozperson').play();
+        document.getElementById('selecionar').play();
+        document.getElementById('escolhaBoneco').style.display='none';
+        document.getElementById('nomeqdigitou').style.display='none'" ;>
+
       <img id="imagemperson2" src="img/p2.png" alt="personagem2" srcset=""
-        onmouseenter="document.getElementById('tocarButton').play()" ;
-        onclick="document.getElementById('selecionar').play();document.getElementById('clicar').play();document.getElementById('clicar').volume = 0.2;document.getElementById('escolhaBoneco').style.display='none';document.getElementById('nomeqdigitou').style.display='none'"
-        ;>
+        onmouseenter="document.getElementById('tocarButton').play()" ; 
+        onclick="document.getElementById('c-loader').style.display='block';
+        document.getElementById('selecionar').play();
+        document.getElementById('clicar').play();
+        document.getElementById('clicar').volume = 0.2;
+        document.getElementById('escolhaBoneco').style.display='none';
+        document.getElementById('nomeqdigitou').style.display='none'" ;>
+
       <img id="imagemperson3" src="img/perso3.png" alt="personagem3" srcset=""
-        onmouseenter="document.getElementById('tocarButton').play()" ;
-        onclick="document.getElementById('selecionar').play();document.getElementById('clicar').play();document.getElementById('clicar').volume = 0.2;document.getElementById('escolhaBoneco').style.display='none';document.getElementById('nomeqdigitou').style.display='none'"
-        ;>
+        onmouseenter="document.getElementById('tocarButton').play()" ; onclick="document.getElementById('c-loader').style.display='block';
+        document.getElementById('selecionar').play();
+        document.getElementById('clicar').play();
+        document.getElementById('clicar').volume = 0.2;
+        document.getElementById('escolhaBoneco').style.display='none';
+        document.getElementById('nomeqdigitou').style.display='none'" ;>
+
     </div>
     <!-- Fim escolha do boneco -->
 
@@ -228,9 +252,9 @@
     <!--_________________________________-->
 
 
-<!-- Animação de loading -->
-<div id="c-loader"></div>
-<!-- Fim Animação de loading -->
+    <!-- Animação de loading -->
+    <div id="c-loader"></div>
+    <!-- Fim Animação de loading -->
   </center>
 
   <script>
