@@ -165,6 +165,7 @@
       display: none;
     }
   </style>
+
   <!-- Músicas -->
   <audio loop src="music/music.mp3" id='tocarMusica'></audio>
   <audio src="music/button.mp3" id='tocarButton'></audio>
@@ -172,6 +173,8 @@
   <audio src="music/selectperson.wav" id='selecionar'></audio>
   <audio src="music/vozperson.mp3" id='vozperson'></audio>
   <audio src="music/vozperson2.mp3" id='vozperson2'></audio>
+<!-- Fim Músicas -->
+
   <!-- Start -->
   <center><img id="start"
       onclick="document.getElementById('start').style.display='none';document.getElementById('welcome').style.display='none';document.getElementById('nome').style.display='block';document.getElementById('clicar').play();document.getElementById('clicar').volume = 0.2;document.getElementById('tocarMusica').play();document.getElementById('tocarMusica').volume = 0.2;"
@@ -210,7 +213,9 @@
         onmouseenter="document.getElementById('tocarButton').play()" ; 
         onclick="document.getElementById('c-loader').style.display='block';
         document.getElementById('vozperson').play();
+        document.getElementById('vozperson').volume = 0.2;
         document.getElementById('selecionar').play();
+        document.getElementById('selecionar').volume = 0.2;
         document.getElementById('escolhaBoneco').style.display='none';
         document.getElementById('nomeqdigitou').style.display='none'" ;>
 
@@ -218,6 +223,7 @@
         onmouseenter="document.getElementById('tocarButton').play()" ; 
         onclick="document.getElementById('c-loader').style.display='block';
         document.getElementById('selecionar').play();
+        document.getElementById('selecionar').volume = 0.2;
         document.getElementById('vozperson2').play();
         document.getElementById('clicar').play();
         document.getElementById('clicar').volume = 0.2;
