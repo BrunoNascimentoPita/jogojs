@@ -173,6 +173,8 @@
   <audio src="music/selectperson.wav" id='selecionar'></audio>
   <audio src="music/vozperson.mp3" id='vozperson'></audio>
   <audio src="music/vozperson2.mp3" id='vozperson2'></audio>
+  <audio src="music/teclado.wav" id='teclado'></audio>
+
 <!-- Fim Músicas -->
 
   <!-- Start -->
@@ -271,6 +273,7 @@
     var pegarNome = "";
     var nomePersonagem = document.getElementById('nome');
     var input = document.getElementById("username");
+    var maximoCaracteres = document.getElementById('username').maxLength;
     //Fim Declaração de variáveis
 
     // Evento de Apertar Enter //
@@ -281,6 +284,14 @@
         document.getElementById("read").click();
       }
     });
+    input.addEventListener("keyup", function (event) {
+      if (0 >= event.keyCode <=126 ) {
+        event.preventDefault();
+        document.getElementById('teclado').volume = 0.2;
+        document.getElementById('teclado').play();
+      }
+     });
+    
     // Fim Evento de Apertar Enter //
 
     // Efeito máquina de escrever //
