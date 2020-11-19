@@ -10,7 +10,13 @@
 
 <body>
   <style>
-    /*Começo*/
+    body {
+      background: #21b2cc;
+      color: rgb(0, 0, 0);
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* Começo */
     #welcome {
       max-width: 480px;
       text-align: center;
@@ -23,71 +29,24 @@
       cursor: default;
     }
 
-    /*Diga seu nome*/
+    /* Fim começo */
+
+    /* Diga seu nome */
+
+    /* Diga seu nome All */
     #nome {
       display: none;
       color: rgb(255, 255, 255);
     }
 
-    .p {
-      display: block;
-    }
+    /* Fim Diga seu nome All */
 
-    body {
-      background: #21b2cc;
-      color: rgb(0, 0, 0);
-      font-family: 'Courier New', Courier, monospace;
-    }
-
+    /* Caixa de inserir nome */
     #username:focus {
       box-shadow: 0 0 0 0;
       border: 0 none;
       outline: 0;
       color: black;
-    }
-
-    #imagemperson1 {
-      cursor: pointer;
-    }
-
-    #imagemperson1:hover {
-      padding: 10px;
-    }
-
-    #imagemperson2 {
-      cursor: pointer;
-    }
-
-    #imagemperson2:hover {
-      padding: 10px;
-    }
-
-    #imagemperson3 {
-      cursor: pointer;
-    }
-
-    #imagemperson3:hover {
-      padding: 10px;
-    }
-
-
-    #start {
-      position: relative;
-      color: rgb(255, 255, 255);
-      cursor: pointer;
-      border-radius: 30px;
-      padding: 20px;
-      border-style: none;
-      top: 20px;
-      object-fit: cover;
-
-    }
-
-
-
-    #escolhaBoneco {
-      display: none;
-      color: rgb(2, 87, 44);
     }
 
     #username {
@@ -113,6 +72,9 @@
 
     }
 
+    /* Fim Caixa de inserir nome */
+
+    /* Botão de confirmação do nome */
     #read {
       position: relative;
       top: 70px;
@@ -127,17 +89,74 @@
       padding: 8px;
     }
 
+    /* Fim Botão de confirmação do nome */
 
-    input:hover {
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 15px;
-      background-color: rgb(5, 201, 48);
+    /* Fim Diga seu nome */
+
+    /*Personagens*/
+    #imagemperson1 {
+      cursor: pointer;
+    }
+
+    #imagemperson1:hover {
       padding: 10px;
-      color: white;
-      outline: 0;
+    }
+
+    #imagemperson2 {
+      cursor: pointer;
+    }
+
+    #imagemperson2:hover {
+      padding: 10px;
+    }
+
+    #imagemperson3 {
+      cursor: pointer;
+    }
+
+    #imagemperson3:hover {
+      padding: 10px;
+    }
+
+    /* Fim Personagens */
+
+    /* Botão de começar */
+    #start {
+      position: relative;
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+      border-radius: 30px;
+      padding: 20px;
+      border-style: none;
+      top: 20px;
+      object-fit: cover;
 
     }
 
+    /* Fim Botão de começar */
+
+    /* Toda a escolha do personagem */
+    #escolhaBoneco {
+      display: none;
+      color: rgb(2, 87, 44);
+    }
+
+    /* Fim Toda a escolha do personagem */
+
+
+
+    /* Passar mouse por cima de um input */
+    input:hover {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 15px;
+      padding: 10px;
+      color: white;
+      outline: 0;
+    }
+
+    /* Fim Passar mouse por cima de um input */
+
+    /* Animação de carregamento */
     #c-loader {
       animation: is-rotating 1s infinite;
       border: 6px solid #e5e5e5;
@@ -154,16 +173,29 @@
       }
     }
 
+    /* Fim Animação de carregamento */
+
+    /* Placeholder dos inputs */
     input::placeholder {
       opacity: 70%;
       font-size: 15px;
     }
 
-    /*DECISÕES*/
+    /* Fim Placeholder dos inputs */
 
+    /* Decisões */
     #decisao1 {
       display: none;
     }
+
+    /* Fim Decisões */
+    /* Cena01 */
+    #cena01{
+      position:absolute;
+      display:none;
+      left:0px;
+    }
+    /* Fim Cena01 */
   </style>
 
   <!-- Músicas -->
@@ -174,13 +206,17 @@
   <audio src="music/vozperson.mp3" id='vozperson'></audio>
   <audio src="music/vozperson2.mp3" id='vozperson2'></audio>
   <audio src="music/teclado.wav" id='teclado'></audio>
-
-<!-- Fim Músicas -->
+<audio src="music/músicapósselectperson.wav" id='tocarMusica1'></audio>
+  <!-- Fim Músicas -->
 
   <!-- Start -->
-  <center><img id="start"
-      onclick="document.getElementById('start').style.display='none';document.getElementById('welcome').style.display='none';document.getElementById('nome').style.display='block';document.getElementById('clicar').play();document.getElementById('clicar').volume = 0.2;document.getElementById('tocarMusica').play();document.getElementById('tocarMusica').volume = 0.2;"
-      src="img/dungeon.png" alt="simbolo da caverna do jogo">
+  <center><img id="start" src="img/dungeon.png" alt="simbolo da caverna do jogo" onclick="document.getElementById('start').style.display='none';
+      document.getElementById('welcome').style.display='none';
+      document.getElementById('nome').style.display='block';
+      document.getElementById('clicar').play();
+      document.getElementById('clicar').volume = 0.2;
+      document.getElementById('tocarMusica').play();
+      document.getElementById('tocarMusica').volume = 0.2;">
     <h1>
       <div id="welcome">
         Bem-Vindo a dungeon!</div>
@@ -191,14 +227,12 @@
     <div id="nome">
 
       <p><strong>
-          <h2> Para entrarmos nessa jornada, escolha seu nome de aventureiro!</h2>
+          <h2 > Para entrarmos nessa jornada, escolha seu nome de aventureiro!</h2>
         </strong></p>
 
       <input type="text" onmouseenter="document.getElementById('tocarButton').play()" name="nome"
         placeholder=" Aventureiro..." id="username" maxlength="15"><img src="img/button.png" id="read"
-        
-        onmouseenter="document.getElementById('tocarButton').play()" ;
-        onclick="document.getElementById('clicar').play();
+        onmouseenter="document.getElementById('tocarButton').play()" ; onclick="document.getElementById('clicar').play();
         document.getElementById('clicar').volume = 0.2;
         nomeDigitado();
         document.getElementById('nome').style.display='none';
@@ -212,39 +246,44 @@
       <h1>Sem mais delongas escolha seu aventureiro!</h1> <br>
 
       <img id="imagemperson1" src="img/p1.2.png" alt="personagem1" srcset=""
-        onmouseenter="document.getElementById('tocarButton').play()" ; 
-        onclick="document.getElementById('c-loader').style.display='block';
+        onmouseenter="document.getElementById('tocarButton').play()" ; onclick="sumirCloader();
+        aparecerCena01();
+        document.getElementById('c-loader').style.display='block';
         document.getElementById('vozperson').play();
         document.getElementById('vozperson').volume = 0.2;
         document.getElementById('selecionar').play();
         document.getElementById('selecionar').volume = 0.2;
         document.getElementById('escolhaBoneco').style.display='none';
-        document.getElementById('nomeqdigitou').style.display='none'" ;>
+        document.getElementById('nomeqdigitou').style.display='none';
+        document.getElementById('tocarMusica').pause()
+        tocarMusica1()";>
 
       <img id="imagemperson2" src="img/p2.png" alt="personagem2" srcset=""
-        onmouseenter="document.getElementById('tocarButton').play()" ; 
-        onclick="document.getElementById('c-loader').style.display='block';
+        onmouseenter="document.getElementById('tocarButton').play()" ; onclick="sumirCloader();
+        document.getElementById('c-loader').style.display='block';
         document.getElementById('selecionar').play();
         document.getElementById('selecionar').volume = 0.2;
         document.getElementById('vozperson2').play();
         document.getElementById('clicar').play();
         document.getElementById('clicar').volume = 0.2;
         document.getElementById('escolhaBoneco').style.display='none';
-        document.getElementById('nomeqdigitou').style.display='none'" ;>
+        document.getElementById('nomeqdigitou').style.display='none'
+        document.getElementById('tocarMusica').pause()" ;>
 
       <img id="imagemperson3" src="img/perso3.png" alt="personagem3" srcset=""
-        onmouseenter="document.getElementById('tocarButton').play()" ; onclick="document.getElementById('c-loader').style.display='block';
+        onmouseenter="document.getElementById('tocarButton').play()" ; onclick="sumirCloader();
         document.getElementById('selecionar').play();
+        document.getElementById('selecionar').volume = 0.2;
         document.getElementById('clicar').play();
         document.getElementById('clicar').volume = 0.2;
         document.getElementById('escolhaBoneco').style.display='none';
-        document.getElementById('nomeqdigitou').style.display='none'" ;>
-
+        document.getElementById('nomeqdigitou').style.display='none' ;
+        document.getElementById('tocarMusica').pause()" ;>
     </div>
     <!-- Fim escolha do boneco -->
 
     <!-- Personagem 01 Cena 01 -->
-    <img src="" alt="">
+    <nocenter id='cena01'><img  src="img/atributos.gif" alt=""><br><img src="img/cenafirst.png"  alt=""></nocenter>
     <!-- Decisão 01 Personagem 01-->
     <div id="decisao1">
       <button>SIM</button>
@@ -285,13 +324,13 @@
       }
     });
     input.addEventListener("keyup", function (event) {
-      if (0 >= event.keyCode <=126 ) {
+      if (0 >= event.keyCode <= 126) {
         event.preventDefault();
         document.getElementById('teclado').volume = 0.2;
         document.getElementById('teclado').play();
       }
-     });
-    
+    });
+
     // Fim Evento de Apertar Enter //
 
     // Efeito máquina de escrever //
@@ -319,8 +358,27 @@
       }
 
     }
+
     // Fim pegar username //
 
+    // Efeito de carregar cena01 //
+    function sumirCloader() {
+      let cloader = document.getElementById('c-loader');
+      cloader.style.display = 'block';
+      setTimeout(function () { cloader.style.display = 'none'; }, 2700);
+    }
+    // Efeito de aparecer cena01 //
+    function aparecerCena01() {
+      let cena01 = document.getElementById('cena01');
+      cena01.style.display = 'none';
+      setTimeout(function () { cena01.style.display = 'block'; }, 3300);
+    }
+    /* Fim Efeito de aparecer cena01 */
+    function tocarMusica1() {
+      let musicatocar = document.getElementById('tocarMusica1');
+      document.getElementById('tocarMusica1').pause();
+      setTimeout(function () { document.getElementById('tocarMusica1').play();document.getElementById('tocarMusica1').volume = 0.2; }, 3300);
+    }
   </script>
 
 </body>
