@@ -1,7 +1,22 @@
-TENTATIVA DE UM INICIANTE EM DESENVOLVIMENTO WEB FAZENDO UM NOVEL GAME RPG
+## TENTATIVA DE UM INICIANTE EM DESENVOLVIMENTO WEB FAZENDO UM NOVEL GAME RPG
+
+# Dungeon - game
+Projeto próprio de um game com conhecimentos básicos em desenvolvimento web.
+
+# História do jogo
+O jogo mostra a história de um cavaleiro ou uma maga, mas descontinuei o projeto.
+
+# Gênero
+Visual novel, 2d, pixelArt, RPG.
 
 
-música de fundo:
+# Autor: 
+
+ - Bruno Nascimento - Game design, level design, sound design, pixelArtist and web developer.
+
+# Efeitos Sonoros e seus respectivos donos:
+
+som de fundo:
 https://freesound.org/people/ShadyDave/sounds/471510/
 
 som de passar por cima o mouse:
