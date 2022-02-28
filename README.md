@@ -1,4 +1,4 @@
-# TENTATIVA DE UM INICIANTE EM DESENVOLVIMENTO WEB FAZENDO UM NOVEL GAME RPG
+# Tentativa de um iniciante em desenvolvimento web fazendo um novel game RPG
 
 # Dungeon - game
 Projeto próprio de um game com conhecimentos básicos em desenvolvimento web.
