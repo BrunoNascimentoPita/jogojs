@@ -1,6 +1,6 @@
 # Tentativa de um iniciante em desenvolvimento web fazendo um novel game RPG
 
-# Nome 
+# Nome do jogo
 ### Dungeon
 Projeto próprio de um game com conhecimentos básicos em desenvolvimento web.
 
