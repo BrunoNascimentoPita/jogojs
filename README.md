@@ -1,6 +1,7 @@
 # Tentativa de um iniciante em desenvolvimento web fazendo um novel game RPG
 
-# Dungeon - game
+# Nome -
+## Dugeon
 Projeto próprio de um game com conhecimentos básicos em desenvolvimento web.
 
 # História do jogo
