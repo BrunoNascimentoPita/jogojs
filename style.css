@@ -1,0 +1,223 @@
+body {
+    background: #21b2cc;
+    color: rgb(0, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  /* Começo */
+  #welcome {
+    max-width: 480px;
+    text-align: center;
+    margin: 60px auto;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(0, 66, 55);
+  }
+
+  #welcome:hover {
+    cursor: default;
+  }
+
+  /* Fim começo */
+
+  /* Diga seu nome */
+
+  /* Diga seu nome All */
+  #nome {
+    display: none;
+    color: rgb(255, 255, 255);
+  }
+
+  /* Fim Diga seu nome All */
+
+  /* Caixa de inserir nome */
+  #username:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    color: black;
+  }
+
+  #username {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    background-color: transparent;
+    width: 200px;
+    background: linear-gradient(rgb(255, 255, 255), rgb(198, 198, 199));
+    border-radius: 15px;
+    position: fixed;
+    height: 40px;
+    left: 50%;
+    top: 100px;
+    transform: translate(-50%, -50%);
+    padding-top: 10px;
+    color: #fff;
+    line-height: 10px;
+    resize: none;
+
+  }
+
+  /* Fim Caixa de inserir nome */
+
+  /* Botão de confirmação do nome */
+  #read {
+    position: relative;
+    top: 70px;
+    border: 0 none;
+    border-radius: 4px;
+    width: 200px;
+    height: 60px;
+    cursor: pointer;
+  }
+
+  #read:hover {
+    padding: 8px;
+  }
+
+  /* Fim Botão de confirmação do nome */
+
+  /* Fim Diga seu nome */
+
+  /*Personagens*/
+  #imagemperson1 {
+    cursor: pointer;
+  }
+
+  #imagemperson1:hover {
+    padding: 10px;
+  }
+
+  #imagemperson2 {
+    cursor: pointer;
+  }
+
+  #imagemperson2:hover {
+    padding: 10px;
+  }
+
+  #imagemperson3 {
+    cursor: pointer;
+  }
+
+  #imagemperson3:hover {
+    padding: 10px;
+  }
+
+  /* Fim Personagens */
+
+  /* Botão de começar */
+  #start {
+    position: relative;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 20px;
+    border-style: none;
+    top: 20px;
+    background-size:cover;
+
+  }
+
+  /* Fim Botão de começar */
+
+  /* Toda a escolha do personagem */
+  #escolhaBoneco {
+    display: none;
+    color: rgb(2, 87, 44);
+  }
+
+  /* Fim Toda a escolha do personagem */
+
+
+
+  /* Passar mouse por cima de um input */
+  input{position:fixed;}
+  input:hover {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    padding: 10px;
+    color: white;
+    outline: 0;
+  }
+
+  /* Fim Passar mouse por cima de um input */
+
+  /* Animação de carregamento */
+  #c-loader {
+    animation: is-rotating 1s infinite;
+    border: 6px solid #e5e5e5;
+    border-radius: 50%;
+    border-top-color: #51d4db;
+    height: 50px;
+    width: 50px;
+    display: none;
+  }
+
+  @keyframes is-rotating {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  /* Fim Animação de carregamento */
+
+  /* Placeholder dos inputs */
+  input::placeholder {
+    opacity: 70%;
+    font-size: 15px;
+    
+  }
+
+  /* Fim Placeholder dos inputs */
+
+  /* Decisões */
+  #decisao1 {
+    display: none;
+  }
+
+  /* Fim Decisões */
+  /* Cena01 */
+  #cena01{
+    position:absolute;
+    display:none;
+    left:0px;
+  }
+  /* Fim Cena01 */
+
+
+
+/*Reponsividade*/
+@media all and (min-width: 0px) and (max-width: 1324px) {
+body{
+  max-width:400px;
+  overflow-x: hidden;
+}
+  img{
+  max-width:100%;
+  height:auto;
+}
+}
+#botoesplayerfirst{
+display:none;
+position: absolute;
+left:70%; 
+top:20%;
+}
+#botoesplayersecond{
+display:none;
+position: absolute;
+left:70%; 
+top:20%;
+}
+
+#diminuir{
+cursor:pointer;
+font-size:40px;
+}
+#aumentar{
+cursor:pointer;
+font-size:40px;
+}
