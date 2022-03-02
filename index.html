@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html lang="en">
 
 <head>
@@ -8,7 +8,7 @@
   <title>Village</title>
 </head>
 
-<body>
+<body >
   <style>
     body {
       background: #21b2cc;
@@ -146,6 +146,7 @@
 
 
     /* Passar mouse por cima de um input */
+    input{position:fixed;}
     input:hover {
       font-family: 'Courier New', Courier, monospace;
       font-size: 15px;
@@ -179,6 +180,7 @@
     input::placeholder {
       opacity: 70%;
       font-size: 15px;
+      
     }
 
     /* Fim Placeholder dos inputs */
@@ -210,7 +212,27 @@
 	height:auto;
 }
 }
+#botoesplayerfirst{
+display:none;
+position: absolute;
+left:70%; 
+top:20%;
+}
+#botoesplayersecond{
+display:none;
+position: absolute;
+left:70%; 
+top:20%;
+}
 
+#diminuir{
+  cursor:pointer;
+  font-size:40px;
+}
+#aumentar{
+  cursor:pointer;
+  font-size:40px;
+}
   </style>
 
   <!-- Músicas -->
@@ -230,7 +252,8 @@
       document.getElementById('nome').style.display='block';
       document.getElementById('clicar').play();
       document.getElementById('clicar').volume = 0.2;
-      document.getElementById('tocarMusica').play();">
+      document.getElementById('tocarMusica').play();
+      document.getElementById('botoesplayerfirst').style.display='block';">
     <h1>
       <div id="welcome">
         Bem-Vindo a dungeon!</div>
@@ -262,6 +285,8 @@
       <img id="imagemperson1" src="img/p1.2.png" alt="personagem1" srcset=""
         onmouseenter="document.getElementById('tocarButton').play()" ; onclick="sumirCloader();
         aparecerCena01();
+        document.getElementById('botoesplayersecond').style.display='block';
+        document.getElementById('botoesplayerfirst').style.display='none';
         document.getElementById('c-loader').style.display='block';
         document.getElementById('vozperson').play();
         document.getElementById('selecionar').play();
@@ -319,7 +344,14 @@
     <div id="c-loader"></div>
     <!-- Fim Animação de loading -->
   </center>
-
+  <div id="botoesplayerfirst">
+ 
+<Strong><h1>Volume</h1></Strong>
+<input type="range" id="weight" min="0" value="0.5" max="1" step="0.1"  onchange="document.getElementById('tocarMusica').volume=this.value">
+  </div>
+<div id="botoesplayersecond"><Strong><h1>Volume</h1></Strong>
+<span id="diminuir" onclick="document.getElementById('tocarMusica1').volume-=0.1;">-</span><input type="range" id="weight" min="0" value="0.5" max="1" step="0.1"  onchange="document.getElementById('tocarMusica1').volume=this.value">
+  <span id="aumentar" onclick="document.getElementById('tocarMusica1').volume+=0.1;">+</span><div>
   <script>
 
     // Declaração de variáveis //
@@ -393,6 +425,7 @@
       document.getElementById('tocarMusica1').pause();
       setTimeout(function () { document.getElementById('tocarMusica1').play(); }, 3300);
     }
+    
   </script>
 
 </body>
